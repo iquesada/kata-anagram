@@ -1,8 +1,12 @@
 defmodule Word do
   def anagram?(word1, word2) do
-    grapheme1 = String.graphemes(word1)
-    grapheme2 = String.graphemes(word2)
+    sort_string(word1) == sort_string(word2)
+  end
 
-    Enum.sort(grapheme1) == Enum.sort(grapheme2)
+  defp sort_string(word) do
+    word
+    |> String.downcase()
+    |> String.graphemes()
+    |> Enum.sort()
   end
 end
