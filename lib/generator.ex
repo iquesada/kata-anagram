@@ -8,5 +8,6 @@ defmodule Generator do
 
   defp permutations([]), do: [[]]
 
-  defp permutations(list), do: for elem <- list, rest <- permutations(list--[elem]), do: [elem|rest]
+  defp permutations(list),
+    do: for(elem <- list, rest <- permutations(list -- [elem]), do: [elem | rest])
 end

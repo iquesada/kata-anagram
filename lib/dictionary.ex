@@ -1,8 +1,8 @@
 defmodule Dictionary do
   def filter(strings, words) do
     strings
-    |> Enum.map(&String.downcase/1)
-    |> Enum.filter(&(in_dictionary(&1, words)))
+    |> Stream.map(&String.downcase/1)
+    |> Enum.filter(&in_dictionary(&1, words))
   end
 
   defp in_dictionary(string, words) do
