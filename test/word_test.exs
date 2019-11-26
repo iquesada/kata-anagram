@@ -1,7 +1,7 @@
 defmodule WordTest do
   use ExUnit.Case
 
-  describe "anagram?" do
+  describe "anagram?/2" do
     test "on success" do
       assert Word.anagram?("cart", "trac")
     end
