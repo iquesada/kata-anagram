@@ -1,5 +1,5 @@
 defmodule Generator do
-  def strings(word) do
+  def siblings(word) do
     word
     |> String.graphemes()
     |> permutations()
