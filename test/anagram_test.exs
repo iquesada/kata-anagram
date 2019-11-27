@@ -1,8 +1,7 @@
 defmodule AnagramTest do
   use ExUnit.Case
-  doctest Anagram
 
-  test "greets the world" do
-    assert Anagram.hello() == :world
+  describe "anagram/1" do
+    IO.inspect Anagram.generate("manual")
   end
 end

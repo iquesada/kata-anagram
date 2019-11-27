@@ -1,18 +1,10 @@
 defmodule Anagram do
-  @moduledoc """
-  Documentation for Anagram.
-  """
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Anagram.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def generate(string) do
+    string
+    |> Generator.siblings()
+    |> Dictionary.filter(dictionary())
   end
+
+  defp dictionary, do: Loader.load("wordlist.txt")
 end
